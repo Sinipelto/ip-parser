@@ -121,9 +121,6 @@ def parse_logs(srcdir, outdir, file_format, filenames=None, parse_all=False, wri
 
     # LIMIT: 150 ips / minute
     for ip in ip_data.keys():
-        if counter >= 4:
-            break
-
         if counter >= 149:
             print("Limit reached! Sleeping for 1 minute.")
             sleep(61)
